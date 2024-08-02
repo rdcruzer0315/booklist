@@ -17,7 +17,7 @@ const BookList = () => {
     
   const recommendBooks = booksData.filter((book) => book.recommend === "yes");
   
-  const carouselRef = useRef(null);
+  const carouselRef: any = useRef(null);
 
   const scrollLeft = () => {
     carouselRef.current.scrollBy({
