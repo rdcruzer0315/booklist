@@ -77,9 +77,9 @@ const BookList = () => {
         </div>
       </div>
 
-      <div className="mt-2">
+      <div className="mt-4">
         <span className='font-bold text-[28px]'>Library</span>
-        <div className='flex flex-col mt-2'>
+        <div className='flex flex-col mt-4'>
           {filteredBooks.map((book, index) => (
             <BookDetails key={index} book={book} />
           ))}
