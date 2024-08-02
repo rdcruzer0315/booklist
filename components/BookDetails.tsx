@@ -34,7 +34,7 @@ const BookDetails = ({ book }: { book: any}) => {
               <span className="font-bold text-[18px] sm:text-[14px]">{book.title}</span>
               <span className="mt-4 text-[12px]">{book.author}</span>
               <div className="flex justify-between items-center mt-6">
-                <button className="bg-[#6366F1] rounded-md text-white text-[14px] sm:text-[10px] px-3 py-2">Continue Reading >></button>
+                <button className="bg-[#6366F1] rounded-md text-white text-[14px] sm:text-[10px] px-3 py-2">Continue Reading &gt;&gt;</button>
                 <div className="bg-[#F9FAFB] rounded-full p-2 cursor-pointer">
                   <img src="/assets/tabler_share.svg" />
                 </div>
