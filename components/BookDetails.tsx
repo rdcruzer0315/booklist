@@ -7,6 +7,7 @@ interface Book {
   title: string;
   author: string;
   genre: string[];
+  short_description: string;
   description: string;
 }
 
@@ -21,8 +22,8 @@ const BookDetails = ({ book }: { book: Book }) => {
         <div className="flex items-center gap-3">
           <img className="w-[60px] h-[80px]" src={book.coverImage} alt={`${book.title} cover`} />
           <div className="flex flex-col gap-3">
-            <span className="font-semibold text-[14px]">{book.title}</span>
-            <span className="text-[12px]">{book.author}</span>
+            <span className="font-semibold text-[20px]">{book.title}</span>
+            <span className="text-[14px] text-[#9CA3AF]">{book.author}</span>
           </div>
         </div>
         <div className="flex gap-1 items-center">
@@ -35,31 +36,32 @@ const BookDetails = ({ book }: { book: Book }) => {
       </div>
       {detail && (
         <div className="bg-white p-4 mb-2">
-          <div className="flex gap-8 sm:gap-2">
-            <img className="w-1/12 lg:w-1/6 sm:w-1/4" src={book.coverImage} alt={`${book.title} cover`} />
-            <div className="w-11/12 lg:w-5/6 sm:w-3/4 flex flex-col justify-end pb-2 border-1 border-b-2">
-              <span className="font-bold text-[18px] sm:text-[14px]">{book.title}</span>
-              <span className="mt-4 text-[12px]">{book.author}</span>
-              <div className="flex justify-between items-center mt-6">
-                <button className="bg-[#6366F1] rounded-md text-white text-[14px] sm:text-[10px] px-3 py-2">Continue Reading &gt;&gt;</button>
+          <div className="flex sm:flex-col gap-8 sm:gap-2 sm:items-center">
+            <img className="w-1/6 lg:w-1/6 sm:w-1/2" src={book.coverImage} alt={`${book.title} cover`} />
+            <div className="w-5/6 lg:w-5/6 sm:w-full flex flex-col justify-end pb-2 border-1 border-b-2">
+              <span className="font-bold text-[40px]">{book.title}</span>
+              <span className="mt-2 text-[14px] text-[#9CA3AF]">{book.author}</span>
+              <span className="mt-[32px] text-[18px]">{book.short_description}</span>
+              <div className="flex justify-between items-center mt-3">
+                <button className="bg-[#6366F1] rounded-md text-white text-[16px] px-3 py-2">Continue Reading &gt;&gt;</button>
                 <div className="bg-[#F9FAFB] rounded-full p-2 cursor-pointer">
                   <img src="/assets/tabler_share.svg" alt="Share" />
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex mt-1">
+          <div className="flex mt-4">
             <div className="flex flex-col">
-              <span className='font-bold text-[20px]'>Library</span>
+              <span className='font-bold text-[28px]'>Description</span>
               <div className="flex sm:flex-col gap-12 sm:gap-2">
-                <span className="w-3/4 sm:w-full text-[14px] pr-6 sm:pr-0">{book.description}</span>
+                <span className="w-3/4 sm:w-full text-[18px] pr-6 sm:pr-0">{book.description}</span>
                 <div className="flex flex-col w-1/4 sm:w-full gap-3">
-                  <span className='font-bold text-[16px]'>Author</span>
-                  <span className="text-[13px]">{book.author}</span>
-                  <span className='font-bold text-[16px]'>Language</span>
-                  <span className="text-[13px]">English (US & UK)</span>
-                  <span className='font-bold text-[16px]'>Book Info</span>
-                  <span className="text-[13px]">Page Count: 284</span>
+                  <span className='font-bold text-[28px]'>Author</span>
+                  <span className="text-[18px]">{book.author}</span>
+                  <span className='font-bold text-[28px]'>Language</span>
+                  <span className="text-[18px]">English (US & UK)</span>
+                  <span className='font-bold text-[28px]'>Book Info</span>
+                  <span className="text-[18px]">Page Count: 284</span>
                 </div>
               </div>
             </div>

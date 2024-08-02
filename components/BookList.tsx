@@ -43,9 +43,9 @@ const BookList = () => {
         {/* Add more genres as needed */}
       </select>
       
-      <div className='mt-2'>
-        <span className='font-bold text-[20px]'>Recommended</span>
-        <div className="carousel-container relative">
+      <div className='mt-4'>
+        <span className='font-bold text-[28px]'>Recommended</span>
+        <div className="carousel-container relative mt-4">
           <button
             onClick={scrollLeft}
             className="carousel-button left"
@@ -56,13 +56,13 @@ const BookList = () => {
             {recommendBooks.map((book, index) => (
               <div
                 key={index}
-                className="p-2 border rounded shadow flex flex-col gap-1 bg-white shrink-0 items-center w-[200px] h-[340px]"
+                className="p-2 border rounded shadow flex flex-col gap-1 bg-white shrink-0 items-center w-[220px] h-[380px]"
               >
-                <div className='flex flex-col items-center'>
-                  <img className='w-[160px] h-[240px] px-auto' src={book.coverImage} />
+                <div className='flex flex-col items-center gap-3'>
+                  <img className='w-[200px] h-[260px] px-auto' src={book.coverImage} />
                   <div className='flex flex-col w-full gap-2 mt-1'>
-                    <span className="font-semibold text-[14px]">{book.title}</span>
-                    <span className="text-[12px]">{book.author}</span>
+                    <span className="font-semibold text-[20px] leading-snug">{book.title}</span>
+                    <span className="text-[14px] text-[#9CA3AF]">{book.author}</span>
                   </div>
                 </div>
               </div>
@@ -78,7 +78,7 @@ const BookList = () => {
       </div>
 
       <div className="mt-2">
-        <span className='font-bold text-[20px]'>Library</span>
+        <span className='font-bold text-[28px]'>Library</span>
         <div className='flex flex-col mt-2'>
           {filteredBooks.map((book, index) => (
             <BookDetails key={index} book={book} />
