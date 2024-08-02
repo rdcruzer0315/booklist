@@ -54,8 +54,8 @@ const BookDetails = ({ book }: { book: Book }) => {
             <div className="flex flex-col">
               <span className='font-bold text-[28px]'>Description</span>
               <div className="flex sm:flex-col gap-12 sm:gap-2">
-                <span className="w-5/6 sm:w-full text-[18px] pr-[120px] sm:pr-0">{book.description}</span>
-                <div className="flex flex-col w-1/6 sm:w-full gap-3">
+                <span className="w-4/5 sm:w-full text-[18px] pr-[400px] sm:pr-0">{book.description}</span>
+                <div className="flex flex-col w-1/5 sm:w-full gap-3">
                   <span className='font-bold text-[28px]'>Author</span>
                   <span className="text-[18px]">{book.author}</span>
                   <span className='font-bold text-[28px]'>Language</span>
