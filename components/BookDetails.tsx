@@ -39,7 +39,7 @@ const BookDetails = ({ book }: { book: Book }) => {
           <div className="flex sm:flex-col gap-8 sm:gap-2 sm:items-center">
             <img className="w-1/6 lg:w-1/6 sm:w-1/2" src={book.coverImage} alt={`${book.title} cover`} />
             <div className="w-5/6 lg:w-5/6 sm:w-full flex flex-col justify-end pb-2 border-1 border-b-2">
-              <span className="font-bold text-[40px]">{book.title}</span>
+              <span className="font-bold text-[40px] leading-tight">{book.title}</span>
               <span className="mt-2 text-[14px] text-[#9CA3AF]">{book.author}</span>
               <span className="mt-[32px] text-[18px]">{book.short_description}</span>
               <div className="flex justify-between items-center mt-3">
