@@ -51,10 +51,11 @@ const BookDetails = ({ book }: { book: Book }) => {
             </div>
           </div>
           <div className="flex mt-4">
-            <div className="flex flex-col">
-              <span className='font-bold text-[28px]'>Description</span>
-              <div className="flex sm:flex-col gap-12 sm:gap-2">
-                <span className="w-4/5 sm:w-full text-[18px] pr-[400px] sm:pr-0">{book.description}</span>
+              <div className="flex sm:flex-col gap-[300px] lg:gap-2 sm:gap-2">
+                <div className="flex flex-col w-4/5 sm:w-full">
+                  <span className='font-bold text-[28px]'>Description</span>
+                  <span className="text-[18px]">{book.description}</span>
+                </div>
                 <div className="flex flex-col w-1/5 sm:w-full gap-3">
                   <span className='font-bold text-[28px]'>Author</span>
                   <span className="text-[18px]">{book.author}</span>
@@ -62,9 +63,9 @@ const BookDetails = ({ book }: { book: Book }) => {
                   <span className="text-[18px]">English (US & UK)</span>
                   <span className='font-bold text-[28px]'>Book Info</span>
                   <span className="text-[18px]">Page Count: 284</span>
+                  <span className="text-[18px]">ISBN: 987 3 12838 455 0</span>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       )}
