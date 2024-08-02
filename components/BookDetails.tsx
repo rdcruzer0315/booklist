@@ -3,9 +3,9 @@
 import { useState } from "react";
 
 const BookDetails = ({ book }: { book: any}) => {
-  if (!book) return null;
-  
   const [detail, setDetail] = useState(false);
+
+  if (!book) return null;
 
   return (
     <>
@@ -18,15 +18,14 @@ const BookDetails = ({ book }: { book: any}) => {
           </div>
         </div>
         <div className="flex gap-1 items-center">
-        {book.genre.map((item, index) => {
-          return <div key={index} className="bg-[#E5E7EB] border border-1 rounded-full px-2 py-1 flex items-center">
-                  <span className="text-[11px]">{item}</span>
-                </div>
-        })}
+          {book.genre.map((item, index) => (
+            <div key={index} className="bg-[#E5E7EB] border border-1 rounded-full px-2 py-1 flex items-center">
+              <span className="text-[11px]">{item}</span>
+            </div>
+          ))}
         </div>
       </div>
-      {
-        detail ? 
+      {detail && (
         <div className="bg-white p-4 mb-2">
           <div className="flex gap-8 sm:gap-2">
             <img className="w-1/12 lg:w-1/6 sm:w-1/4" src={book.coverImage} />
@@ -57,8 +56,8 @@ const BookDetails = ({ book }: { book: any}) => {
               </div>
             </div>
           </div>
-        </div> : <></>
-      }
+        </div>
+      )}
     </>
   );
 };
