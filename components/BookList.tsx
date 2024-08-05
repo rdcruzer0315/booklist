@@ -57,7 +57,7 @@ const BookList = () => {
       
       <div className='mt-4'>
         <h2 className='font-bold text-[28px]'>Recommended</h2>
-        <div className="relative mt-4">
+        <div className="carousel-container relative mt-4">
           <button 
             onClick={scrollLeft} 
             className="carousel-button absolute left-0 top-1/2 transform -translate-y-1/2"
